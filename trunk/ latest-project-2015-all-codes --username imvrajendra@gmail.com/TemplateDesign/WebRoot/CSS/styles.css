@@ -1,0 +1,133 @@
+.bodyStructure {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.header {
+	width: 100%;
+	text-align: center;
+	height: 90px;
+	padding: 10px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.headerSpan {
+	font-family: serif;
+	font-size: 60px;
+	font-weight: 10px;
+}
+
+.headerShadow {
+	width: 50%;
+	height: 10;
+	text-align: center;
+}
+
+/* Center Menu Item */
+.container {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#menu {
+	margin: 0 auto;
+	display: inline-block;
+	list-style: none;
+	padding: 0 0 0 0;
+}
+
+#menu li {
+	float: left;
+	background-color: white;
+}
+
+#menu li a {
+	display: block;
+	color: black;
+	padding: 0 15px 0 15px;
+	text-decoration: none;
+	font: serif;
+}
+
+#menu li a:hover {
+	color: white;
+	background-color: black;
+	outline-width: 1px;
+	outline-color: orange;
+	outline-style: solid;
+}
+
+/* Image fade in fade out. */
+
+CYCLER - COMMON 
+.container {
+	height: 400px;
+	width: 100%;
+	position: relative;
+}
+
+/* Background Image of About Page */
+.aboutBody {
+    background-image: url("../Images/professionalPoint.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-color: transparent;
+}
+
+.serviceBody{
+	position: relative;
+	width: 100%;
+    height: 100%;
+    border: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-color: transparent;
+}
+
+.serviceAll {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.aboutBlock {
+	margin-left: 0px;
+	margin-top: 50px;
+	margin-right: 0px;
+	margin-bottom: 50px;	
+}
+
+.ContactBody {
+	background-image: url("../Images/contact-information.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-color: transparent;
+}
+
+.ContactBlock {
+	margin-top: 70px;
+	margin-bottom: 100px;	
+}
+
+.iframestyle{
+	background-color: black;
+	width: 100%;
+	height: auto;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
