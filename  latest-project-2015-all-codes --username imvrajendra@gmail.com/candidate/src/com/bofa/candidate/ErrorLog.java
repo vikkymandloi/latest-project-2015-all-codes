@@ -38,7 +38,10 @@ public class ErrorLog {
 		} 
 	}
 	
-	public static ErrorLog getInstance(){
+	/** static Synchronized is declared to make this as thread safe. 
+	 *  now onnly one thread can acquire the lock of this class (Class Level Locking).
+	*/
+	public static synchronized ErrorLog getInstance(){
 		if(errorLog == null) {
 			errorLog = new ErrorLog();
 		}
