@@ -1,0 +1,10 @@
+346972,	International Church of the Foursquare Gospel,2005-01-02
+346973,	Heritage Bank Mclean,2005-01-02
+346976,	CNA Financial Corporation,2005-01-02
+346978,	Foodmaker Inc,2005-01-02
+346986,	American General Corporation,2005-01-02
+346990,	Leucadia National Corporation,2005-01-02
+346993,	Lincoln National Corp,2005-01-02
+347181,	Nordson,2005-01-02
+347184,	Trailblazer Pipeline Co.,2005-01-02
+347185,	Kohl's Corporation,2005-01-02
