@@ -36,5 +36,11 @@ public interface SalesDAO {
 	 */
 	public Map<String, List<Sales>> getAllSalesForCustomer(List<String> customer, String startDate,String endDate);
 	
-	
+	/**
+	 * Obtain all Sales records with Customer ID
+	 * @author vmandloi
+	 * @param customerId, startDate, endDate
+	 * @return
+	 */
+	public Map<String, List<Sales>> getAllSalesForCustomer(List<String> customer);
 }

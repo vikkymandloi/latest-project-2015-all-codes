@@ -90,22 +90,29 @@ public class ControllerSales {
 			SalesDAO salesimpl = new SalesImplDAO();
 			Map<String, Customer> customerMap = new LinkedHashMap<String, Customer>();
 			Map<String, List<Sales>> customerSalesSorted = new LinkedHashMap<String, List<Sales>>();
+			Map<String, List<Sales>> customerSales = null;
 			List<String> customerIDList = null;
+			List<Customer> customerList = null;
 			Date startDate = null;
 			Date endDate = null;
 			// Check Dates for Start and End Date
 			if(sales.checkDates(args)) {
 				startDate = SalesUtility.getDate(args[0]);
 				endDate = SalesUtility.getDate(args[1]);
+				
 				if(startDate.compareTo(endDate)>0 || startDate==null || endDate == null) {
 					error.logError("Start Date cannot be After End Date");
 					terminator();
 				}
+				// populate the list according to End dates.
+				customerList = customer.getAllCustomers(args[1]);
+			} else if(args == null || args.length == 0) {
+				customerList = customer.getAllCustomers();
 			} else {
 				terminator();
 			}
 			// Obtain the list of Customers which are registered before sale end Date.
-			List<Customer> customerList = customer.getAllCustomers(args[1]);
+			
 			// Sort the Customer List According to It's Name
 			Collections.sort(customerList);
 			
@@ -115,8 +122,11 @@ public class ControllerSales {
 				}
 				// Convert the Customer key set to List
 				customerIDList = new LinkedList<String>(customerMap.keySet());
-				
-				Map<String, List<Sales>> customerSales = salesimpl.getAllSalesForCustomer(customerIDList, args[0], args[1]);
+				if(args == null || args.length == 0) {
+					customerSales = salesimpl.getAllSalesForCustomer(customerIDList);
+				} else {
+					customerSales = salesimpl.getAllSalesForCustomer(customerIDList, args[0], args[1]);
+				}
 				//Sort the order of Map coming from Sales for Customer.
 				for(String custID : customerIDList){
 					if(custID != null || custID.length() != 0) {
