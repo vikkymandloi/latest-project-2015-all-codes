@@ -128,5 +128,37 @@ public class SalesImplDAO implements SalesDAO {
 		}
 		return result;
 	}
-
+	
+	/** @author vmandloi
+	 * Populate the List according to the file Sales.txt, where sale date 
+	 * is between start date and end date, and also the customer id is Prior 
+	 * to sale End Date.
+	 */
+	public Map<String, List<Sales>> getAllSalesForCustomer(List<String> customer) {
+		Map<String, List<Sales>> result = null;
+		List<Sales> resultSales = null;
+		try {
+			// get all sales records for all the customers available.
+			resultSales = getAllSales();
+			result = new LinkedHashMap<String, List<Sales>>();
+			// Traverse through all the records which are b/w the sales 
+			// start date and end date.
+			for(Sales saleRecord : resultSales) {
+				String customerID = saleRecord.getCustomer_id();
+				if(customer.contains(customerID)) {
+					if(result.containsKey(customerID)){
+						// if for a Customer already present in map then add a new record 
+						// to the list of sales for that customer.
+						result.get(customerID).add(saleRecord);
+					} else {
+						result.put(customerID, new LinkedList<Sales>());
+					}
+				}
+			}
+		} catch (Exception e) {
+			error.logError("IOException :" +e.getMessage());
+		}
+		return result;
+	}
+	
 }
