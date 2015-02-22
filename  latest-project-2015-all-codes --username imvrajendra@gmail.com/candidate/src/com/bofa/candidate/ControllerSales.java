@@ -129,15 +129,18 @@ public class ControllerSales {
 				}
 				//Sort the order of Map coming from Sales for Customer.
 				for(String custID : customerIDList){
-					if(custID != null || custID.length() != 0) {
+					if(custID != null && custID.length() != 0) {
 						customerSalesSorted.put(custID, customerSales.get(custID));
 					}
 				}
 				customerSales = null;
 				// Process Sales
 				Map<String, String> processedDiscount = SalesUtility.processDiscount(customerSalesSorted, discountProperties);
-				
-				SalesUtility.publishSales(customerMap, processedDiscount);
+				if(processedDiscount != null && processedDiscount.size() != 0) {
+					SalesUtility.publishSales(customerMap, processedDiscount);
+				} else {
+					error.logError("No Discounts to be processed for Customers.");
+				}
 			} else {
 				error.logError("No Customers found for the period..!");
 			}
