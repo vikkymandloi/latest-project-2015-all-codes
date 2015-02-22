@@ -1,13 +1,13 @@
 =================================================================================================================
 Customer Name                                               Sale Amount 	 	 	 Refund Amount
 
-American General Corporation                                359,582.67	 	 	 (15,615.59)
-CNA Financial Corporation                                   391,039.05	 	 	 (17,267.05)
-Foodmaker Inc                                               439,078.25	 	 	 (19,789.11)
-Heritage Bank Mclean                                        420,203.65	 	 	 (18,798.19)
-International Church of the Foursquare Gospel               385,670.35	 	 	 (16,985.19)
-Kohl's Corporation                                          432,678.24	 	 	 (19,453.11)
-Lincoln National Corp                                       410,026.88	 	 	 (18,263.91)
-Nordson                                                     359,633.33	 	 	 (15,618.25)
+American General Corporation                                326,766.95	 	 	 (13,892.76)
+CNA Financial Corporation                                   358,878.59	 	 	 (15,578.63)
+Foodmaker Inc                                               392,575.33	 	 	 (17,347.7)
+Heritage Bank Mclean                                        396,648.77	 	 	 (17,561.56)
+International Church of the Foursquare Gospel               345,838.86	 	 	 (14,894.04)
+Kohl's Corporation                                          390,197.41	 	 	 (17,222.86)
+Lincoln National Corp                                       360,716.6	 	 	 (15,675.12)
+Nordson                                                     337,571.19	 	 	 (14,459.99)
 =================================================================================================================
-Total                                                        3,197,912.42	 	 	 141,790.4
+Total                                                        2,909,193.7	 	 	 126,632.66
